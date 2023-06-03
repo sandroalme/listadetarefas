@@ -17,15 +17,23 @@ main {
     min-width: 400px;
 }
 
+header {
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    min-width: 400px;
+}
+
 h1 {
     display: flex;
     justify-content: center;
+    width: 90%;
 }
 
 .btn_header {
-   position: absolute;
-   right: 18%;
-   margin-top: -30px;
+   display: flex;
+   justify-content: center;
+   width: 10%;
 }
 
 header span {
