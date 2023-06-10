@@ -11,8 +11,8 @@ body {
 }
 
 main {
-    margin-top: 40px;
-    width: 80%;
+    margin: 15px;
+    width: 100%;
     max-width: 600px;
 }
 
@@ -102,6 +102,19 @@ button {
 
 .btn_add:hover {
     background-color: #0000ff;
+}
+
+.btn_remove {
+    font-size: x-small;
+    color: rgb(228, 228, 228);
+    background-color: blue;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.btn_remove:hover {
+    background-color: #0000ff;
+    color: #ffffff;
 }
 
 @media (max-width: 775px) {
