@@ -122,4 +122,8 @@ button {
         white-space: nowrap;
         font-size: x-large;
     }
+
+    button {
+        width: 15%;
+    }
 }
