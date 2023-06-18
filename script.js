@@ -1,6 +1,7 @@
 const inputTarefa = document.querySelector('.input_tarefas');
 const btnTarefa = document.querySelector('.btn_add');
 const tarefas = document.querySelector('.tarefas');
+const btnDeleteAll = document.querySelector('.btn_header');
 
 function criaDiv() {
     const div = document.createElement('div');

@@ -123,7 +123,7 @@ button {
         font-size: x-large;
     }
 
-    button {
+    .btn_remove {
         width: 15%;
     }
 }
