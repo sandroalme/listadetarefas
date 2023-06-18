@@ -123,7 +123,11 @@ button {
         font-size: x-large;
     }
 
-    .btn_remove {
-        width: 15%;
+    .div_li li {
+        width: 80%;
+    }
+
+    .div_li button {
+        width: 20%;
     }
 }
