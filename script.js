@@ -1,7 +1,6 @@
 const inputTarefa = document.querySelector('.input_tarefas');
 const btnTarefa = document.querySelector('.btn_add');
 const tarefas = document.querySelector('.tarefas');
-const btnDeleteAll = document.querySelector('.btn_header');
 
 function criaDiv() {
     const div = document.createElement('div');
@@ -36,6 +35,7 @@ function criaTarefa(textoInput) {
     div.appendChild(li);
     div.appendChild(botao);
     limpaInput();
+    salvarTarefa();
 }
 
 btnTarefa.addEventListener('click', ()=> {
@@ -48,5 +48,30 @@ document.addEventListener('click', (e)=> {
 
     if (elemento.classList.contains('btn_remove')) {
         elemento.parentElement.remove();
+        salvarTarefa();
     }
 });
+
+function salvarTarefa() {
+    const liTarefas = tarefas.querySelectorAll('li');
+    const listaDeTarefas = [];
+
+    for (let tarefa of liTarefas) {
+        let tarefaTexto = tarefa.innerText;
+        listaDeTarefas.push(tarefaTexto);
+    }
+
+    const tarefasJSON = JSON.stringify(listaDeTarefas);
+    localStorage.setItem('tarefas', tarefasJSON);
+
+}
+
+function addTarefasSalvas() {
+    const tarefas = localStorage.getItem('tarefas');
+    const listaDeTarefas = JSON.parse(tarefas);
+
+    for (let tarefa of listaDeTarefas) {
+        criaTarefa(tarefa);
+    }
+}
+addTarefasSalvas();
